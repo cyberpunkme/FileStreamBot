@@ -10,38 +10,39 @@ from pyrogram.errors import UserNotParticipant
 db = Database(Var.DATABASE_URL, Var.SESSION_NAME)
 
 START_TEXT = """
-<i>👋 Ｈｅｙ,</i>{}\n\n
-<i>𝐼'𝑚 𝑇𝑒𝑙𝑒𝑔𝑟𝑎𝑚 𝐹𝑖𝑙𝑒𝑠 𝐷𝑖𝑟𝑒𝑐𝑡 𝐿𝑖𝑛𝑘 𝐺𝑒𝑛𝑒𝑟𝑎𝑡𝑜𝑟</i>"""
+<i>👋𝐇𝐞𝐲,</i>{}\n\n
+<i>𝐼'𝑚 𝑇𝑒𝑙𝑒𝑔𝑟𝑎𝑚 𝐹𝑖𝑙𝑒𝑠 𝐹𝑎𝑠𝑡𝑒𝑠𝑡 𝐷𝑖𝑟𝑒𝑐𝑡 𝐿𝑖𝑛𝑘 𝐺𝑒𝑛𝑒𝑟𝑎𝑡𝑜𝑟</i>"""
 
 HELP_TEXT = """
-<i>- Sᴇɴᴅ ᴍᴇ ᴀɴʏ ꜰɪʟᴇ (ᴏʀ) ᴍᴇᴅɪᴀ ꜰʀᴏᴍ ᴛᴇʟᴇɢʀᴀᴍ.</i>
-<i>- I ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ᴇxᴛᴇʀɴᴀʟ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ !.</i>
-<i>- Aᴅᴅ Mᴇ ɪɴ ʏᴏᴜʀ Cʜᴀɴɴᴇʟ Fᴏʀ Dɪʀᴇᴄᴛ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋs Bᴜᴛᴛᴏɴ</i>
-<i>- Tʜɪs Pᴇʀᴍᴇᴀɴᴛ Lɪɴᴋ Wɪᴛʜ Fᴀsᴛᴇsᴛ Sᴘᴇᴇᴅ</i>\n\n
-<i>Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ (ᴏʀ) ʀᴇᴘᴏʀᴛ ʙᴜɢꜱ</i> <b>: <a href='https://t.me/cyber_punk_me'>[ Ｃｌｉｃｋ Ｈｅｒｅ ]</a></b>"""
+- 𝗦𝗘𝗡𝗗 𝗠𝗘 𝗔𝗡𝗬 𝗙𝗜𝗟𝗘 (𝗢𝗥) 𝗠𝗘𝗗𝗜𝗔 𝗙𝗥𝗢𝗠 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠/n 
+- 𝗜 𝗪𝗜𝗟𝗟 𝗣𝗥𝗢𝗩𝗜𝗗𝗘 𝗘𝗫𝗧𝗘𝗥𝗡𝗔𝗟 𝗗𝗜𝗥𝗘𝗖𝗧 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗟𝗜𝗡𝗞!/n
+- 𝗔𝗗𝗗 𝗠𝗘 𝗜𝗡 𝗬𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗙𝗢𝗥 𝗗𝗜𝗥𝗘𝗖𝗧 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗟𝗜𝗡𝗞𝗦
+𝗕𝗨𝗧𝗧𝗢𝗡/n 
+- 𝗧𝗛𝗜𝗦 𝗣𝗘𝗥𝗠𝗘𝗔𝗡𝗧 𝗟𝗜𝗡𝗞 𝗪𝗜𝗧𝗛 𝗙𝗔𝗦𝗧𝗘𝗦𝗧 𝗦𝗣𝗘𝗘𝗗/n/n
+𝗥𝗘𝗣𝗢𝗥𝗧 𝗕𝗨𝗚𝗦 𝗔𝗡𝗗 𝗜𝗦𝗦𝗨𝗘𝗦 😑: <a href='https://t.me/cyber_punk_me'>[Ｃｌｉｃｋ Ｈｅｒｅ]</a></b>"""
 
 ABOUT_TEXT = """
 <b>⚜ Mʏ ɴᴀᴍᴇ : CP LinkGen</b>"""
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Hᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about'),
-        InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('𝙷𝚎𝚕𝚙', callback_data='help'),
+        InlineKeyboardButton('𝙰𝚋𝚘𝚞𝚝', callback_data='about'),
+        InlineKeyboardButton('𝙲𝚕𝚘𝚜𝚎', callback_data='close')
         ]]
     )
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Hᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about'),
-        InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('𝙷𝚘𝚖𝚎', callback_data='home'),
+        InlineKeyboardButton('𝙰𝚋𝚘𝚞𝚝', callback_data='about'),
+        InlineKeyboardButton('𝙲𝚕𝚘𝚜𝚎', callback_data='close')
         ]]
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Hᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('Hᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('𝙷𝚘𝚖𝚎', callback_data='home'),
+        InlineKeyboardButton('𝙷𝚎𝚕𝚙', callback_data='help'),
+        InlineKeyboardButton('𝙲𝚕𝚘𝚜𝚎', callback_data='close')
         ]]
     )
 
